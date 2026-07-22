@@ -1,0 +1,222 @@
+{
+  "common": {
+    "years": "Years"
+  },
+  "nav": {
+    "admin": "Admin",
+    "myOrders": "My Orders",
+    "greeting": "Hi, {{phone}}",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+  "login": {
+    "title": "Welcome Back 💗",
+    "phoneNumber": "Phone Number",
+    "password": "Password",
+    "submit": "Login",
+    "submitting": "Logging in...",
+    "noAccount": "New here?",
+    "createAccount": "Create an account",
+    "error": "Login failed"
+  },
+  "register": {
+    "title": "Create Account 🎀",
+    "phoneNumber": "Phone Number (username)",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "submit": "Register",
+    "submitting": "Creating account...",
+    "haveAccount": "Already have an account?",
+    "login": "Login",
+    "passwordMismatch": "Passwords do not match",
+    "error": "Registration failed"
+  },
+  "home": {
+    "latestArrivals": "✨ Latest Arrivals",
+    "loading": "Loading...",
+    "loadError": "Could not load products",
+    "noProducts": "No products available yet."
+  },
+  "productCard": {
+    "viewSizeChart": "View Size Chart",
+    "viewMore": "View More",
+    "sizeChartTitle": "Size Chart - {{name}}"
+  },
+  "productDetails": {
+    "notFound": "Product not found",
+    "loading": "Loading...",
+    "dispatch": "Dispatch in {{days}} day(s)",
+    "viewSizeChart": "View Size Chart",
+    "description": "Description",
+    "viewOnInsta": "View on Insta",
+    "howToBuy": "How to Buy",
+    "buyNow": "Buy Now",
+    "selectAgeFirst": "Select an age group to continue",
+    "selectAgeAndImage": "Please select an age group and a dress image to continue",
+    "sizeChartModalTitle": "Size Chart",
+    "noImage": "No image",
+    "machineTranslated": "Automatically translated",
+    "tryOnLink": "✨ See How It Looks",
+    "tryOn": {
+      "title": "See How It Looks",
+      "step1": "1. The Dress",
+      "step2": "2. Your Photo",
+      "step3": "3. Preview",
+      "photoTip": "Tip: use a full-body photo, standing and facing the camera — this is a manual overlay, not an AI render, so you'll drag the dress into place yourself. A close-up face photo won't have room to fit it.",
+      "previewPlaceholder": "Upload or take your photo to see a preview here.",
+      "guidelines": "Please upload a plain photo of yourself only. Nude, explicit, or otherwise inappropriate images are strictly not allowed. Your photo stays in your browser — it is never uploaded to our servers or stored anywhere.",
+      "agreeLabel": "I agree to the content guidelines above and confirm my photo is appropriate.",
+      "dropHint": "Drag & drop a photo here, or",
+      "chooseButton": "Choose Photo",
+      "takePhotoButton": "Take Photo",
+      "captureButton": "Capture",
+      "cancelButton": "Cancel",
+      "cameraError": "Couldn't access the camera. Please check permissions or choose a photo instead.",
+      "guideHint": "Line up your shoulders and chest inside the dashed box before capturing — this matches where the dress starts by default.",
+      "dragHint": "Drag the dress image to position it, use the slider to resize, or nudge it with the arrows.",
+      "nudgeLeft": "Move dress left",
+      "nudgeUp": "Move dress up",
+      "nudgeDown": "Move dress down",
+      "nudgeRight": "Move dress right",
+      "resetButton": "Reset Position",
+      "removePhoto": "Remove photo",
+      "privacyNote": "Your uploaded photo is processed entirely on your device and is discarded when you close this window.",
+      "reportLink": "Report inappropriate content"
+    }
+  },
+  "whatsappButton": {
+    "label": "WhatsApp"
+  },
+  "checkout": {
+    "changeDress": "Change dress",
+    "age": "Age",
+    "price": "Price",
+    "dressPicker": {
+      "title": "Choose Photo & Age",
+      "update": "Update"
+    },
+    "shipping": {
+      "title": "Shipping Details",
+      "phoneNumber": "Phone Number",
+      "savedAddresses": "Your saved addresses",
+      "shipToThis": "Ship to this address",
+      "useDifferentAddress": "Use a different address",
+      "addAddress": "Add address",
+      "save": "Save",
+      "saving": "Saving...",
+      "saved": "Shipping details saved",
+      "saveError": "Could not save shipping details",
+      "accountCreatedNotice": "We created an account for {{phone}} with a temporary password so you can log in and track this order later.",
+      "tempPasswordLabel": "Temporary password:",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "payment": {
+      "title": "Payment",
+      "option1Title": "1. Pay via PhonePe / Google Pay",
+      "option1Body": "Pay ₹{{amount}} to {{number}} ({{name}}) using PhonePe or Google Pay, then share the screenshot on WhatsApp — we'll take care of the rest there.",
+      "whatsappButton": "Message us on WhatsApp",
+      "option2Title": "2. Pay Online (Razorpay)",
+      "option2Body": "Secure online checkout is coming soon.",
+      "payWithRazorpay": "Pay ₹{{amount}} securely with Razorpay",
+      "comingSoon": "Coming soon"
+    }
+  },
+  "howToBuy": {
+    "title": "How to Buy",
+    "verifyNotice": "Please confirm this name and number before you pay.",
+    "paymentNumber": "WhatsApp / Payment number:",
+    "step1Title": "1. Message us on WhatsApp",
+    "step1Body": "Just click on this button to send us a WhatsApp message about this item.",
+    "step1Button": "Message {{name}} on WhatsApp",
+    "step2Title": "2. Pay via PhonePe / Google Pay",
+    "step2Body": "Pay to {{number}} ({{name}}) using PhonePe or Google Pay, then share the payment screenshot on the same WhatsApp number above.",
+    "step3Title": "3. Or scan the QR code",
+    "step3Body": "Scan the code below to pay, then send the payment screenshot to the WhatsApp number above.",
+    "qrComingSoon": "QR code coming soon."
+  },
+  "buyNow": {
+    "loading": "Loading...",
+    "title": "Buy: {{name}}",
+    "selectAgeGroup": "Select Age Group",
+    "processing": "Processing...",
+    "proceedToPay": "Proceed to Pay",
+    "selectAgeGroupError": "Please select an age group",
+    "gatewayNotConfigured": "Payment gateway is not configured yet. Set VITE_RAZORPAY_KEY_ID.",
+    "checkoutLoadError": "Could not load Razorpay checkout",
+    "paymentError": "Payment could not be started"
+  },
+  "myOrders": {
+    "loading": "Loading...",
+    "empty": "You haven't placed any orders yet.",
+    "title": "My Orders",
+    "orderId": "Order ID",
+    "product": "Product",
+    "age": "Age",
+    "price": "Price",
+    "purchaseDate": "Purchase Date",
+    "tracking": "Tracking",
+    "track": "Track"
+  },
+  "userLayout": {
+    "new": "New",
+    "myOrders": "My Orders",
+    "profile": "Profile"
+  },
+  "profile": {
+    "title": "My Profile",
+    "myDetails": {
+      "title": "My Details",
+      "loading": "Loading...",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "save": "Save Details",
+      "saving": "Saving...",
+      "updated": "Details updated",
+      "updateError": "Failed to update details"
+    },
+    "addresses": {
+      "title": "My Addresses",
+      "loading": "Loading...",
+      "empty": "No saved addresses yet.",
+      "addAddress": "+ Add Address",
+      "save": "Add Address",
+      "saveEdit": "Save Address",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "recipientName": "Recipient Name",
+      "recipientPhone": "Recipient Phone",
+      "addressLine1": "Address Line 1",
+      "addressLine2": "Address Line 2",
+      "city": "City",
+      "state": "State",
+      "pinCode": "Pin Code",
+      "setDefault": "Set as default address",
+      "default": "Default",
+      "makeDefault": "Make default",
+      "edit": "Edit",
+      "delete": "Delete",
+      "phoneLabel": "Phone: {{phone}}",
+      "added": "Address added",
+      "updated": "Address updated",
+      "deleted": "Address deleted",
+      "defaultUpdated": "Default address updated",
+      "addError": "Failed to add address",
+      "updateError": "Failed to update address",
+      "deleteError": "Failed to delete address",
+      "defaultUpdateError": "Failed to update default address"
+    },
+    "changePassword": {
+      "title": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmNewPassword": "Confirm New Password",
+      "save": "Change Password",
+      "saving": "Saving...",
+      "success": "Password changed successfully",
+      "error": "Failed to change password"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+nav /login
+wait-for input[type=tel]
+fill input[type=tel] 9000000001
+fill input[type=password] TestAdmin@123
+screenshot 01-login-filled
+click button[type=submit]
+wait-for-text New Product
+nav /admin/orders
+wait-for-text View / Add Orders
+wait-for table
+screenshot 02-admin-orders-grid
+click table tbody tr:first-child button
+wait-for-text Edit Order
+screenshot 03-admin-orders-edit-form
+console-errors

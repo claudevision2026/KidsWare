@@ -1,0 +1,38 @@
+# Environment / secrets
+.env
+.env.local
+*.env
+!*.env.example
+
+# Backend (Python)
+backend/venv/
+backend/**/__pycache__/
+*.pyc
+backend/uvicorn.log
+*.log
+
+# Frontend (Node)
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/vite.log
+.vite/
+
+# Uploaded runtime files (user-generated content, not source)
+backend/app/uploads/*
+!backend/app/uploads/.gitkeep
+
+# Claude Code local-only files
+.claude/settings.local.json
+**/node_modules/
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

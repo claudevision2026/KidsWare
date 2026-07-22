@@ -1,0 +1,195 @@
+{
+  "common": {
+    "years": "वर्ष"
+  },
+  "nav": {
+    "admin": "एडमिन",
+    "myOrders": "मेरे ऑर्डर",
+    "greeting": "नमस्ते, {{phone}}",
+    "logout": "लॉगआउट",
+    "login": "लॉगिन",
+    "register": "रजिस्टर करें"
+  },
+  "login": {
+    "title": "वापसी पर स्वागत है 💗",
+    "phoneNumber": "फ़ोन नंबर",
+    "password": "पासवर्ड",
+    "submit": "लॉगिन",
+    "submitting": "लॉगिन हो रहा है...",
+    "noAccount": "नए हैं?",
+    "createAccount": "खाता बनाएं",
+    "error": "लॉगिन विफल रहा"
+  },
+  "register": {
+    "title": "खाता बनाएं 🎀",
+    "phoneNumber": "फ़ोन नंबर (उपयोगकर्ता नाम)",
+    "email": "ईमेल पता",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "submit": "रजिस्टर करें",
+    "submitting": "खाता बनाया जा रहा है...",
+    "haveAccount": "पहले से खाता है?",
+    "login": "लॉगिन",
+    "passwordMismatch": "पासवर्ड मेल नहीं खाते",
+    "error": "पंजीकरण विफल रहा"
+  },
+  "home": {
+    "latestArrivals": "✨ नई आगमन",
+    "loading": "लोड हो रहा है...",
+    "loadError": "उत्पाद लोड नहीं हो सके",
+    "noProducts": "अभी तक कोई उत्पाद उपलब्ध नहीं है।"
+  },
+  "productCard": {
+    "viewSizeChart": "साइज़ चार्ट देखें",
+    "viewMore": "और देखें",
+    "sizeChartTitle": "साइज़ चार्ट - {{name}}"
+  },
+  "productDetails": {
+    "notFound": "उत्पाद नहीं मिला",
+    "loading": "लोड हो रहा है...",
+    "dispatch": "{{days}} दिन(दिनों) में भेजा जाएगा",
+    "viewSizeChart": "साइज़ चार्ट देखें",
+    "description": "विवरण",
+    "viewOnInsta": "इंस्टा पर देखें",
+    "howToBuy": "कैसे खरीदें",
+    "buyNow": "अभी खरीदें",
+    "selectAgeFirst": "जारी रखने के लिए एक आयु वर्ग चुनें",
+    "selectAgeAndImage": "कृपया जारी रखने के लिए एक आयु वर्ग और एक ड्रेस छवि चुनें",
+    "sizeChartModalTitle": "साइज़ चार्ट",
+    "noImage": "कोई छवि नहीं",
+    "machineTranslated": "स्वचालित रूप से अनुवादित"
+  },
+  "whatsappButton": {
+    "label": "व्हाट्सएप"
+  },
+  "checkout": {
+    "changeDress": "ड्रेस बदलें",
+    "age": "आयु",
+    "price": "कीमत",
+    "dressPicker": {
+      "title": "फोटो और आयु चुनें",
+      "update": "अपडेट करें"
+    },
+    "shipping": {
+      "title": "शिपिंग विवरण",
+      "phoneNumber": "फ़ोन नंबर",
+      "savedAddresses": "आपके सहेजे गए पते",
+      "shipToThis": "इस पते पर भेजें",
+      "useDifferentAddress": "अलग पता उपयोग करें",
+      "addAddress": "पता जोड़ें",
+      "save": "सहेजें",
+      "saving": "सहेजा जा रहा है...",
+      "saved": "शिपिंग विवरण सहेजे गए",
+      "saveError": "शिपिंग विवरण सहेजने में विफल",
+      "accountCreatedNotice": "हमने {{phone}} के लिए एक अस्थायी पासवर्ड के साथ खाता बनाया है, ताकि आप बाद में लॉगिन करके इस ऑर्डर को ट्रैक कर सकें।",
+      "tempPasswordLabel": "अस्थायी पासवर्ड:",
+      "copy": "कॉपी करें",
+      "copied": "कॉपी हो गया!"
+    },
+    "payment": {
+      "title": "भुगतान",
+      "option1Title": "1. फोनपे / गूगल पे से भुगतान करें",
+      "option1Body": "फोनपे या गूगल पे का उपयोग करके ₹{{amount}} {{number}} ({{name}}) को भुगतान करें, फिर स्क्रीनशॉट व्हाट्सएप पर भेजें — बाकी विवरण हम वहीं ले लेंगे।",
+      "whatsappButton": "व्हाट्सएप पर हमें संदेश भेजें",
+      "option2Title": "2. ऑनलाइन भुगतान करें (Razorpay)",
+      "option2Body": "सुरक्षित ऑनलाइन भुगतान जल्द ही आएगा।",
+      "payWithRazorpay": "Razorpay से सुरक्षित रूप से ₹{{amount}} भुगतान करें",
+      "comingSoon": "जल्द आ रहा है"
+    }
+  },
+  "howToBuy": {
+    "title": "कैसे खरीदें",
+    "verifyNotice": "भुगतान करने से पहले कृपया यह नाम और नंबर सुनिश्चित कर लें।",
+    "paymentNumber": "व्हाट्सएप / भुगतान नंबर:",
+    "step1Title": "1. व्हाट्सएप पर हमें संदेश भेजें",
+    "step1Body": "इस ड्रेस के बारे में हमें व्हाट्सएप संदेश भेजने के लिए इस बटन पर क्लिक करें।",
+    "step1Button": "{{name}} को व्हाट्सएप पर संदेश भेजें",
+    "step2Title": "2. फोनपे / गूगल पे से भुगतान करें",
+    "step2Body": "फोनपे या गूगल पे का उपयोग करके {{number}} ({{name}}) को भुगतान करें, फिर भुगतान का स्क्रीनशॉट ऊपर दिए गए उसी व्हाट्सएप नंबर पर भेजें।",
+    "step3Title": "3. या QR कोड स्कैन करें",
+    "step3Body": "भुगतान करने के लिए नीचे दिया गया कोड स्कैन करें, फिर भुगतान का स्क्रीनशॉट ऊपर दिए गए व्हाट्सएप नंबर पर भेजें।",
+    "qrComingSoon": "QR कोड जल्द ही आएगा।"
+  },
+  "buyNow": {
+    "loading": "लोड हो रहा है...",
+    "title": "खरीदें: {{name}}",
+    "selectAgeGroup": "आयु वर्ग चुनें",
+    "processing": "प्रोसेस हो रहा है...",
+    "proceedToPay": "भुगतान के लिए आगे बढ़ें",
+    "selectAgeGroupError": "कृपया एक आयु वर्ग चुनें",
+    "gatewayNotConfigured": "भुगतान गेटवे अभी कॉन्फ़िगर नहीं किया गया है। VITE_RAZORPAY_KEY_ID सेट करें।",
+    "checkoutLoadError": "Razorpay चेकआउट लोड नहीं हो सका",
+    "paymentError": "भुगतान शुरू नहीं हो सका"
+  },
+  "myOrders": {
+    "loading": "लोड हो रहा है...",
+    "empty": "आपने अभी तक कोई ऑर्डर नहीं दिया है।",
+    "title": "मेरे ऑर्डर",
+    "orderId": "ऑर्डर आईडी",
+    "product": "उत्पाद",
+    "age": "आयु",
+    "price": "कीमत",
+    "purchaseDate": "खरीद तिथि",
+    "tracking": "ट्रैकिंग",
+    "track": "ट्रैक करें"
+  },
+  "userLayout": {
+    "new": "नया",
+    "myOrders": "मेरे ऑर्डर",
+    "profile": "प्रोफ़ाइल"
+  },
+  "profile": {
+    "title": "मेरी प्रोफ़ाइल",
+    "myDetails": {
+      "title": "मेरी जानकारी",
+      "loading": "लोड हो रहा है...",
+      "firstName": "पहला नाम",
+      "lastName": "अंतिम नाम",
+      "save": "जानकारी सहेजें",
+      "saving": "सहेजा जा रहा है...",
+      "updated": "जानकारी अपडेट हो गई",
+      "updateError": "जानकारी अपडेट करने में विफल"
+    },
+    "addresses": {
+      "title": "मेरे पते",
+      "loading": "लोड हो रहा है...",
+      "empty": "अभी तक कोई पता सहेजा नहीं गया है।",
+      "addAddress": "+ पता जोड़ें",
+      "save": "पता जोड़ें",
+      "saveEdit": "पता सहेजें",
+      "saving": "सहेजा जा रहा है...",
+      "cancel": "रद्द करें",
+      "recipientName": "प्राप्तकर्ता का नाम",
+      "recipientPhone": "प्राप्तकर्ता का फ़ोन",
+      "addressLine1": "पता लाइन 1",
+      "addressLine2": "पता लाइन 2",
+      "city": "शहर",
+      "state": "राज्य",
+      "pinCode": "पिन कोड",
+      "setDefault": "डिफ़ॉल्ट पते के रूप में सेट करें",
+      "default": "डिफ़ॉल्ट",
+      "makeDefault": "डिफ़ॉल्ट बनाएं",
+      "edit": "संपादित करें",
+      "delete": "हटाएं",
+      "phoneLabel": "फ़ोन: {{phone}}",
+      "added": "पता जोड़ा गया",
+      "updated": "पता अपडेट हो गया",
+      "deleted": "पता हटा दिया गया",
+      "defaultUpdated": "डिफ़ॉल्ट पता अपडेट हो गया",
+      "addError": "पता जोड़ने में विफल",
+      "updateError": "पता अपडेट करने में विफल",
+      "deleteError": "पता हटाने में विफल",
+      "defaultUpdateError": "डिफ़ॉल्ट पता अपडेट करने में विफल"
+    },
+    "changePassword": {
+      "title": "पासवर्ड बदलें",
+      "currentPassword": "वर्तमान पासवर्ड",
+      "newPassword": "नया पासवर्ड",
+      "confirmNewPassword": "नए पासवर्ड की पुष्टि करें",
+      "save": "पासवर्ड बदलें",
+      "saving": "सहेजा जा रहा है...",
+      "success": "पासवर्ड सफलतापूर्वक बदल दिया गया",
+      "error": "पासवर्ड बदलने में विफल"
+    }
+  }
+}

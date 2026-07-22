@@ -1,0 +1,13 @@
+# Step 1: log in as test admin
+nav /login
+wait-for input[type=text], input#phoneNumber, input
+fill input[type=text] 9000000001
+fill input[type=password] TestAdmin@123
+click button[type=submit]
+wait-for-text Admin
+screenshot 01-logged-in-admin
+
+# Step 2: go to View Orders, enter a brand-new phone number, fill address, submit
+nav /admin/orders
+wait-for-text View / Add Orders
+screenshot 02-view-orders-empty

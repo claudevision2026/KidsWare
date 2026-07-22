@@ -1,0 +1,13 @@
+# Verify the Try-On modal opens cleanly and has no console errors
+nav /products/4
+wait-for-text See How It Looks
+screenshot tryon-01-product-page
+click a[href="#pd-tryon"]
+wait-for-text 1. The Dress
+wait-for-text 2. Your Photo
+wait-for-text 3. Preview
+screenshot tryon-02-modal-open
+click #pd-tryon-agree
+wait-for-text Choose Photo
+screenshot tryon-03-agreed
+console-errors
