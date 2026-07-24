@@ -33,6 +33,14 @@ stages:
 
           - script: |
               cd backend
+              if not exist "app\uploads" mkdir app\uploads
+              if not exist "app\uploads\SizeChartsUpload" mkdir app\uploads\SizeChartsUpload
+              if not exist "app\uploads\dressuploads" mkdir app\uploads\dressuploads
+              echo Upload directories created
+            displayName: 'Create Upload Directories'
+
+          - script: |
+              cd backend
               call venv\Scripts\activate.bat
               python -c "import app.main; import app.models; import app.routers; import app.schemas; print('All backend modules imported successfully')"
             displayName: 'Validate Backend Imports'
