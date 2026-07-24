@@ -1,11 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../context/AuthContext'
+import { useCart } from '../context/CartContext'
 import Logo from './Logo'
 import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
   const { isAuthenticated, isAdmin, phoneNumber, logout } = useAuth()
+  const { itemCount } = useCart()
   const navigate = useNavigate()
   const { t } = useTranslation()
 
@@ -31,6 +33,13 @@ export default function Navbar() {
           {isAuthenticated && !isAdmin && (
             <Link className="nav-link" to="/my-orders">
               {t('nav.myOrders')}
+            </Link>
+          )}
+          {isAuthenticated && !isAdmin && (
+            <Link className="nav-link" to="/cart">
+              <i className="bi bi-cart3 me-1" />
+              {t('nav.cart')}
+              {itemCount > 0 && <span className="badge bg-danger ms-1">{itemCount}</span>}
             </Link>
           )}
           {isAuthenticated ? (

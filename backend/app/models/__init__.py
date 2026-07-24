@@ -136,6 +136,7 @@ class Order(Base):
     CourierVendor: Mapped[str | None] = mapped_column(Unicode(100), nullable=True)
     TrackingID: Mapped[str | None] = mapped_column(Unicode(100), nullable=True)
     TrackingURL: Mapped[str | None] = mapped_column(Unicode(500), nullable=True)
+    Quantity: Mapped[int] = mapped_column(Integer, nullable=False, default=1)
     UserAddressID: Mapped[int | None] = mapped_column(
         ForeignKey("UserAddress.UserAddressID"), nullable=True
     )
@@ -145,3 +146,20 @@ class Order(Base):
 
     product: Mapped["Product"] = relationship()
     address: Mapped["UserAddress | None"] = relationship()
+
+
+class CartItem(Base):
+    __tablename__ = "CartItem"
+
+    CartItemID: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    UserID: Mapped[int] = mapped_column(ForeignKey("Users.UserID"), nullable=False)
+    ProductID: Mapped[int] = mapped_column(ForeignKey("Product.ProductID"), nullable=False)
+    AgeGroup: Mapped[str] = mapped_column(Unicode(50), nullable=False)
+    ImageURL: Mapped[str | None] = mapped_column(Unicode(500), nullable=True)
+    Price: Mapped[float] = mapped_column(DECIMAL(10, 2), nullable=False)
+    Quantity: Mapped[int] = mapped_column(Integer, nullable=False, default=1)
+    CreatedDate: Mapped[datetime.datetime] = mapped_column(
+        DateTime, default=datetime.datetime.utcnow
+    )
+
+    product: Mapped["Product"] = relationship()

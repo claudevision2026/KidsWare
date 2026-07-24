@@ -7,19 +7,21 @@ from app.models import Order, Product, User, UserAddress
 from app.schemas import (
     OrderCreateRequest,
     OrderCreateResponse,
+    OrderGroupResponse,
     OrderResponse,
     OrderUpdateRequest,
     UserLookupResponse,
 )
 from app.services import address_service
 from app.services.address_mapper import to_response as _address_to_response
+from app.services.order_mapper import to_grouped_response as _to_grouped_response
 from app.services.order_mapper import to_response as _to_response
 
 router = APIRouter(prefix="/api/orders", tags=["orders"])
 admin_router = APIRouter(prefix="/api/admin/orders", tags=["admin-orders"])
 
 
-@router.get("/my", response_model=list[OrderResponse])
+@router.get("/my", response_model=list[OrderGroupResponse])
 def my_orders(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     orders = (
         db.query(Order)
@@ -28,7 +30,7 @@ def my_orders(db: Session = Depends(get_db), user: User = Depends(get_current_us
         .order_by(Order.CreatedDate.desc())
         .all()
     )
-    return [_to_response(o) for o in orders]
+    return _to_grouped_response(orders)
 
 
 @admin_router.get("/lookup-user", response_model=UserLookupResponse)

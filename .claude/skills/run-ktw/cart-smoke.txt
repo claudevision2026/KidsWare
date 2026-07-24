@@ -1,0 +1,34 @@
+# Cart smoke test: register a fresh customer, add a product to cart, verify
+# the Cart page shows it, adjust quantity, then remove it.
+
+nav /register
+wait-for input[type=tel]
+fill input[type=tel] 9123456701
+fill input[type=email] carttest701@example.com
+fill :nth-match(input[type=password],1) CartTest@123
+fill :nth-match(input[type=password],2) CartTest@123
+screenshot cart-01-register-filled
+click button[type=submit]
+wait-for-text Hi,
+
+nav /products/4
+wait-for-text Add to Cart
+click text=0-3 Years: ₹699
+click :nth-match(img,2)
+screenshot cart-02-product-selected
+click text=Add to Cart
+wait-for-text Added to cart!
+screenshot cart-03-added-to-cart
+
+nav /cart
+wait-for-text My Cart
+screenshot cart-04-cart-page
+
+click text=+
+screenshot cart-05-quantity-incremented
+
+click text=Remove
+wait-for-text Your cart is empty
+screenshot cart-06-cart-empty
+
+console-errors

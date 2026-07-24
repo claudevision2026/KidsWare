@@ -15,6 +15,9 @@ export default function UserLayout({ children }) {
             <NavLink className="nav-link" to="/my-orders">
               <i className="bi bi-receipt me-2" /> {t('userLayout.myOrders')}
             </NavLink>
+            <NavLink className="nav-link" to="/cart">
+              <i className="bi bi-cart3 me-2" /> {t('userLayout.cart')}
+            </NavLink>
             <NavLink className="nav-link" to="/profile">
               <i className="bi bi-person-circle me-2" /> {t('userLayout.profile')}
             </NavLink>

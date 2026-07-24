@@ -1,0 +1,20 @@
+nav /login
+wait-for input[type=tel]
+fill input[type=tel] 9123456701
+fill input[type=password] CartTest@123
+click button[type=submit]
+wait-for-text Hi,
+
+nav /products/4
+wait-for-text Add to Cart
+click text=0-3 Years: ₹699
+click :nth-match(img,2)
+click text=Add to Cart
+wait-for-text Added to cart!
+
+nav /cart/checkout
+wait-for-text Checkout
+wait-for-text Payment
+screenshot payment-01-page-loaded
+eval document.querySelector('a.btn-whatsapp')?.getAttribute('href')
+console-errors

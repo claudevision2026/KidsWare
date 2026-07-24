@@ -247,6 +247,7 @@ class OrderResponse(BaseModel):
     trackingId: str | None
     trackingUrl: str | None
     createdDate: datetime.datetime
+    quantity: int
     userAddressId: int | None
     address: AddressResponse | None
 
@@ -255,6 +256,60 @@ class OrderCreateResponse(BaseModel):
     order: OrderResponse
     newUserCreated: bool
     tempPassword: str | None = None
+
+
+class OrderGroupResponse(BaseModel):
+    transactionId: str | None
+    purchaseDate: datetime.datetime | None
+    total: float
+    items: list[OrderResponse]
+
+
+# ---------- Cart ----------
+class CartItemAddRequest(BaseModel):
+    productId: int
+    ageGroup: str
+    imageUrl: str | None = None
+
+
+class CartItemUpdateRequest(BaseModel):
+    quantity: int = Field(ge=0)
+
+
+class CartItemResponse(BaseModel):
+    cartItemId: int
+    productId: int
+    productName: str
+    ageGroup: str
+    imageUrl: str | None
+    price: float
+    quantity: int
+    lineTotal: float
+    stockCount: int
+    createdDate: datetime.datetime
+
+
+class CartResponse(BaseModel):
+    items: list[CartItemResponse]
+    total: float
+
+
+class CartCheckoutCreateOrderResponse(BaseModel):
+    razorpayOrderId: str
+    amount: int
+    currency: str
+    keyId: str
+
+
+class CartCheckoutVerifyRequest(BaseModel):
+    razorpay_order_id: str
+    razorpay_payment_id: str
+    razorpay_signature: str
+    userAddressId: int
+
+
+class CartCheckoutVerifyResponse(BaseModel):
+    orders: list[OrderResponse]
 
 
 # ---------- Payments ----------

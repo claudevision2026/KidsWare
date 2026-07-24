@@ -12,6 +12,8 @@ import HowToBuy from './pages/HowToBuy'
 
 import UserLayout from './pages/user/UserLayout'
 import MyOrders from './pages/user/MyOrders'
+import Cart from './pages/user/Cart'
+import CartCheckout from './pages/user/CartCheckout'
 import Profile from './pages/user/Profile'
 
 import AdminLayout from './pages/admin/AdminLayout'
@@ -47,6 +49,8 @@ function App() {
           <Route path="/buy/:productId" element={<BuyNow />} />
           <Route element={<UserLayout />}>
             <Route path="/my-orders" element={<MyOrders />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/cart/checkout" element={<CartCheckout />} />
             <Route path="/profile" element={<Profile />} />
           </Route>
         </Route>

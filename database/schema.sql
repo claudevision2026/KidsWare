@@ -187,3 +187,31 @@ BEGIN
     ALTER TABLE dbo.Orders ADD UserAddressID INT NULL FOREIGN KEY REFERENCES dbo.UserAddress(UserAddressID);
 END
 GO
+
+IF COL_LENGTH('dbo.Orders', 'Quantity') IS NULL
+BEGIN
+    ALTER TABLE dbo.Orders ADD Quantity INT NOT NULL DEFAULT 1;
+END
+GO
+
+-- ============================================================
+-- CartItem (a logged-in user's in-progress shopping basket)
+-- Price/ImageURL are snapshots taken at add-time (see specs/07-cart.md)
+-- so later admin edits to ProductPrice/ProductImage don't retroactively
+-- change what's already sitting in a customer's cart.
+-- ============================================================
+IF OBJECT_ID('dbo.CartItem', 'U') IS NULL
+BEGIN
+    CREATE TABLE dbo.CartItem (
+        CartItemID   INT IDENTITY(1,1) PRIMARY KEY,
+        UserID       INT NOT NULL FOREIGN KEY REFERENCES dbo.Users(UserID),
+        ProductID    INT NOT NULL FOREIGN KEY REFERENCES dbo.Product(ProductID),
+        AgeGroup     NVARCHAR(50) NOT NULL,
+        ImageURL     NVARCHAR(500) NULL,
+        Price        DECIMAL(10,2) NOT NULL,
+        Quantity     INT NOT NULL DEFAULT 1,
+        CreatedDate  DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+        CONSTRAINT UQ_CartItem_User_Product_Age UNIQUE (UserID, ProductID, AgeGroup)
+    );
+END
+GO

@@ -1,0 +1,32 @@
+nav /login
+wait-for input[type=tel]
+fill input[type=tel] 9123456701
+fill input[type=password] CartTest@123
+click button[type=submit]
+wait-for-text Hi,
+
+nav /products/4
+wait-for-text Add to Cart
+click text=0-3 Years: ₹699
+click :nth-match(img,2)
+click text=Add to Cart
+wait-for-text Added to cart!
+
+nav /cart
+wait-for-text My Cart
+screenshot checkout-01-cart-with-item
+click text=Proceed to Checkout
+wait-for-text Checkout
+screenshot checkout-02-page-loaded
+
+wait-for-text Shipping Details
+fill :nth-match(input.form-control-sm,3) 12 MG Road
+fill :nth-match(input.form-control-sm,5) Hyderabad
+fill :nth-match(input.form-control-sm,6) Telangana
+fill :nth-match(input.form-control-sm,7) 500001
+screenshot checkout-03-address-filled
+click text=Save
+wait-for-text Shipping details saved
+screenshot checkout-04-address-saved
+
+console-errors

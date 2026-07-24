@@ -8,6 +8,7 @@ from app.routers import (
     admin_products,
     admin_users,
     auth,
+    cart,
     checkout,
     orders,
     payments,
@@ -35,6 +36,7 @@ app.include_router(products.router)
 app.include_router(orders.router)
 app.include_router(orders.admin_router)
 app.include_router(addresses.router)
+app.include_router(cart.router)
 app.include_router(checkout.router)
 app.include_router(payments.router)
 

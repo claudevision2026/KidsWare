@@ -5,6 +5,7 @@
   "nav": {
     "admin": "Admin",
     "myOrders": "My Orders",
+    "cart": "Cart",
     "greeting": "Hi, {{phone}}",
     "logout": "Logout",
     "login": "Login",
@@ -53,6 +54,8 @@
     "viewOnInsta": "View on Insta",
     "howToBuy": "How to Buy",
     "buyNow": "Buy Now",
+    "addToCart": "Add to Cart",
+    "addedToCart": "Added to cart!",
     "selectAgeFirst": "Select an age group to continue",
     "selectAgeAndImage": "Please select an age group and a dress image to continue",
     "sizeChartModalTitle": "Size Chart",
@@ -163,7 +166,22 @@
   "userLayout": {
     "new": "New",
     "myOrders": "My Orders",
+    "cart": "Cart",
     "profile": "Profile"
+  },
+  "cart": {
+    "title": "My Cart",
+    "loading": "Loading...",
+    "empty": "Your cart is empty.",
+    "browseDresses": "Browse dresses",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "total": "Total",
+    "lowStock": "Only {{count}} left in stock",
+    "checkout": "Proceed to Checkout"
+  },
+  "cartCheckout": {
+    "title": "Checkout"
   },
   "profile": {
     "title": "My Profile",

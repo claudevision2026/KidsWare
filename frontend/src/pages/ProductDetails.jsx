@@ -1,21 +1,28 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import apiClient from '../api/client'
 import WhatsAppButton from '../components/WhatsAppButton'
 import TryOnModal from '../components/TryOnModal'
 import { formatAgeGroup } from '../utils/format'
+import { useAuth } from '../context/AuthContext'
+import { useCart } from '../context/CartContext'
 
 const ENABLE_BUY_NOW = import.meta.env.VITE_ENABLE_BUY_NOW === 'true'
 
 export default function ProductDetails() {
   const { productId } = useParams()
+  const navigate = useNavigate()
+  const { isAuthenticated } = useAuth()
+  const { refreshCartCount } = useCart()
   const [product, setProduct] = useState(null)
   const [error, setError] = useState('')
   const [activeImageIdx, setActiveImageIdx] = useState(0)
   const [imageConfirmed, setImageConfirmed] = useState(false)
   const [selectedAgeGroup, setSelectedAgeGroup] = useState('')
   const [validationError, setValidationError] = useState('')
+  const [addToCartMessage, setAddToCartMessage] = useState('')
+  const [addingToCart, setAddingToCart] = useState(false)
   const [translatedDescription, setTranslatedDescription] = useState(null)
   const [isMachineTranslated, setIsMachineTranslated] = useState(false)
   const { t, i18n } = useTranslation()
@@ -32,6 +39,7 @@ export default function ProductDetails() {
     setImageConfirmed(false)
     setSelectedAgeGroup('')
     setValidationError('')
+    setAddToCartMessage('')
   }, [productId])
 
   useEffect(() => {
@@ -75,6 +83,35 @@ export default function ProductDetails() {
       setValidationError(t('productDetails.selectAgeAndImage'))
     } else {
       setValidationError('')
+    }
+  }
+
+  const handleAddToCart = async () => {
+    if (!selectedAgeGroup || !imageReady) {
+      setValidationError(t('productDetails.selectAgeAndImage'))
+      return
+    }
+    setValidationError('')
+
+    if (!isAuthenticated) {
+      navigate('/login')
+      return
+    }
+
+    setAddingToCart(true)
+    try {
+      await apiClient.post('/cart/items', {
+        productId: product.productId,
+        ageGroup: selectedAgeGroup,
+        imageUrl: images[activeImageIdx] || images[0],
+      })
+      await refreshCartCount()
+      setAddToCartMessage(t('productDetails.addedToCart'))
+      setTimeout(() => setAddToCartMessage(''), 2500)
+    } catch (err) {
+      setValidationError(err.response?.data?.detail || err.message)
+    } finally {
+      setAddingToCart(false)
     }
   }
 
@@ -197,8 +234,17 @@ export default function ProductDetails() {
                 {t('productDetails.howToBuy')}
               </a>
             )}
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={handleAddToCart}
+              disabled={addingToCart}
+            >
+              <i className="bi bi-cart-plus me-1" /> {t('productDetails.addToCart')}
+            </button>
           </div>
           {validationError && <p className="text-danger small mb-3">{validationError}</p>}
+          {addToCartMessage && <p className="text-success small mb-3">{addToCartMessage}</p>}
         </div>
       </div>
 
