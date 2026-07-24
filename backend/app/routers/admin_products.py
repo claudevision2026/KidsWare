@@ -6,10 +6,9 @@ from sqlalchemy.orm import Session, joinedload
 from app.auth import require_admin
 from app.config import settings
 from app.database import get_db
-from app.models import Model, Product, ProductImage, ProductPrice, Vendor
+from app.models import Product, ProductImage, ProductPrice
 from app.schemas import (
     ProductDetailResponse,
-    ProductImageResponse,
     ProductPriceInput,
     ProductPriceResponse,
     ProductUpdateRequest,
