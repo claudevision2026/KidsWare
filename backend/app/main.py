@@ -16,7 +16,7 @@ from app.routers import (
     reference_data,
 )
 
-app = FastAPI(title="KTW - Kids Dress Store API")
+app = FastAPI(title="KTW - Kids Dress Store API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
