@@ -1,17 +1,11 @@
 {
-  "hooks": {
-    "UserPromptSubmit": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "jq -r '.user_message // empty' | grep -qi 'commit\\|push to dev\\|push dev' && (echo 'Committing and pushing to DEV...' && cd D:\\KPTW\\KTW && git add . && git commit -m \"Update KTW DEV branch\" && git push origin DEV && echo 'Successfully pushed to DEV!') || true",
-            "statusMessage": "Checking for commit/push trigger...",
-            "timeout": 60
-          }
-        ]
-      }
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git status)",
+      "Bash(git log *)"
     ]
   }
 }

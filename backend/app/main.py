@@ -43,4 +43,5 @@ app.include_router(payments.router)
 
 @app.get("/api/health")
 def health():
+    """Health check endpoint for KTW API."""
     return {"status": "ok"}
