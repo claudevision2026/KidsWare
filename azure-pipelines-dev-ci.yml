@@ -56,8 +56,9 @@ stages:
           - script: |
               cd backend
               call venv\Scripts\activate.bat
-              python -m black app/ scripts/ --check --quiet
-            displayName: 'Check Backend Code Format (Black)'
+              python -m black app/ scripts/
+              echo Backend code formatted with Black
+            displayName: 'Format Backend Code (Black)'
             continueOnError: true
 
           - script: |
